@@ -1,0 +1,40 @@
+{
+    "window.zoomLevel": 0,
+    "editor.accessibilitySupport": "off",
+    "editor.autoIndent": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.dragAndDrop": false,
+    "editor.fontFamily": "'Fira Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [79, 140],
+    "editor.snippetSuggestions": "bottom",
+
+    "workbench.startupEditor": "none",
+
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.useExperimentalFileWatcher": true,
+
+    "explorer.openEditors.visible": 0,
+
+    "sublimeTextKeymap.promptV3Features": true,
+
+    "npm.packageManager": "yarn",
+
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.venvFolders": [
+        "${workspaceFolder}/env",
+        "envs",
+        ".pyenv",
+        ".direnv"
+    ],
+    "files.autoSave": "onFocusChange"
+}

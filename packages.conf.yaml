@@ -1,0 +1,8 @@
+- yaourt:
+  - vim
+  - google-chrome
+  - visual-studio-code-bin
+  - docker
+  - docker-compose
+  - telegram-desktop-bin
+  - pycharm-professional

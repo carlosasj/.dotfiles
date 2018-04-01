@@ -1,0 +1,32 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.aliases:
+    ~/.bash_aliases:
+    ~/.bash_logout:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.gitconfig:
+      force: true
+    ~/.gitignore_global:
+    ~/.dir_colors: LS_COLORS/LS_COLORS
+    ~/.load_nvm:
+    ~/.load_pyenv:
+    ~/.load_yarn:
+    ~/.profile:
+    ~/.zshrc:
+      force: true
+    ~/.zshrc.pre-oh-my-zsh:
+
+    ~/.config/Code/User/keybindings.json:
+      force: true
+      path: config/Code/User/keybindings.json
+
+    ~/.config/Code/User/settings.json:
+      force: true
+      path: config/Code/User/settings.json
