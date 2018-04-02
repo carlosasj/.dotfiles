@@ -1,0 +1,11 @@
+export GIT_WORK_NAME='Your Work Name'
+export GIT_WORK_EMAIL='mail@work.com'
+export GIT_WORK_KEY='~/.ssh/id_rsa'
+
+export GIT_PERSONAL_NAME='Your Personal Name'
+export GIT_PERSONAL_EMAIL='mail@personal.com'
+export GIT_PERSONAL_KEY='~/.ssh/id_rsa_personal'
+
+export GIT_BUILDER_NAME='Your Builder Name'
+export GIT_BUILDER_EMAIL='mail@builder.com'
+export GIT_BUILDER_KEY='~/.ssh/id_rsa_builder'

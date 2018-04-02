@@ -25,8 +25,8 @@
 	status = auto
 
 [color "status"]
-	added = yellow
-	changed = green
+	added = green
+	changed = yellow
 	untracked = cyan
 
 [color "branch"]
@@ -50,8 +50,11 @@
 	enabled = 1
 
 [diff]
-	algorithm = histogram
+	algorithm = patience
 	indentheuristic = 1
 
 [advice]
 	statusHints = 0
+
+[gpg]
+	program = gpg2

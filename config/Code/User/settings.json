@@ -1,40 +1,48 @@
 {
-    "window.zoomLevel": 0,
     "editor.accessibilitySupport": "off",
     "editor.autoIndent": false,
     "editor.cursorBlinking": "smooth",
     "editor.dragAndDrop": false,
     "editor.fontFamily": "'Fira Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
-    "editor.formatOnPaste": false,
+    "editor.fontSize": 15,
+    "editor.formatOnPaste": true,
     "editor.minimap.renderCharacters": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [79, 140],
-    "editor.snippetSuggestions": "bottom",
+    "editor.snippetSuggestions": "top",
 
-    "workbench.startupEditor": "none",
+    "explorer.openEditors.visible": 0,
 
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.useExperimentalFileWatcher": true,
-
-    "explorer.openEditors.visible": 0,
-
-    "sublimeTextKeymap.promptV3Features": true,
+    "files.autoSave": "onWindowChange",
 
     "npm.packageManager": "yarn",
 
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "env/**/*.*",
+        "**/site-packages/**/*.py"
+    ],
     "python.venvFolders": [
         "${workspaceFolder}/env",
         "envs",
         ".pyenv",
         ".direnv"
     ],
-    "files.autoSave": "onFocusChange"
+
+    "sublimeTextKeymap.promptV3Features": true,
+
+    "vsicons.projectDetection.autoReload": true,
+
+    "window.zoomLevel": 0,
+
+    "workbench.startupEditor": "none"
 }

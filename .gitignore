@@ -1,1 +1,3 @@
 .directory
+load_secure_data
+load_machine_specific

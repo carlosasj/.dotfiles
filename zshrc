@@ -70,10 +70,13 @@ plugins=(
   jira
   last-working-dir
   ng
+  npm
   nvm
+  pip
   pyenv
   python
   sudo
+  systemd
   virtualenv
   yarn
   zsh-syntax-highlighting-filetypes
