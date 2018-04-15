@@ -17,6 +17,7 @@
     ~/.load_pyenv:
     ~/.load_sdkman:
     ~/.load_secure_data:
+    ~/.load_machine_specific:
     ~/.load_yarn:
     ~/.profile:
     ~/.vimrc:
