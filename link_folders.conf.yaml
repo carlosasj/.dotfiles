@@ -1,0 +1,23 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/Documents:
+      path: /run/media/schneider/Arquivos/Documents
+    ~/Downloads:
+      path: /run/media/schneider/Arquivos/Downloads
+    ~/github:
+      path: /run/media/schneider/Arquivos/github
+    ~/Music:
+      path: /run/media/schneider/Arquivos/Music
+    ~/Pictures:
+      path: /run/media/schneider/Arquivos/Pictures
+    ~/scripts:
+      path: /run/media/schneider/Arquivos/scripts
+    ~/Videos:
+      path: /run/media/schneider/Arquivos/Videos
