@@ -3,7 +3,7 @@
     "editor.autoIndent": false,
     "editor.cursorBlinking": "smooth",
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "'Fira Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
     "editor.formatOnPaste": true,
@@ -44,5 +44,29 @@
 
     "window.zoomLevel": 0,
 
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.defaultDateFormat": "YYYY-MM-DD hh:mm:ss",
+    "gitlens.historyExplorer.enabled": true,
+    "gitlens.explorers.avatars": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.scopes": [
+        "document",
+        "containers"
+    ],
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.format": "${author}, ${date} • ${message}",
+    "gitlens.blame.format": "${message|40?} ${date|14-}",
+    "gitlens.blame.avatars": false
 }

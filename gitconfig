@@ -17,6 +17,7 @@
 	st = status
 	cane = commit --amend --no-edit
 	ds = "!f() { idx=${1-0}; git stash show -p stash@{$idx}; }; f"
+	stash--staged = "!f() { git stash --keep-index && git stash save \"$1\" && git stash apply stash@{1} && git stash show -p | git apply -R && git stash drop stash@{1}; }; f"
 
 [color]
 	ui = true
