@@ -8,14 +8,18 @@
 - link:
     ~/.aliases:
     ~/.bashrc:
+      force: true
     ~/.gitconfig:
       force: true
     ~/.gitignore_global:
-    ~/.dir_colors: LS_COLORS/LS_COLORS
-    ~/.load_fuck:
-    ~/.load_nvm:
-    ~/.load_pyenv:
-    ~/.load_sdkman:
+    ~/.dir_colors:
+      force: true
+      path: LS_COLORS/LS_COLORS
+    # ~/.load_fuck:
+    # ~/.load_nvm:
+    ~/.load_nodenv:
+    # ~/.load_pyenv:
+    # ~/.load_sdkman:
     ~/.load_secure_data:
     ~/.load_machine_specific:
     ~/.load_yarn:

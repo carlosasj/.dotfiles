@@ -7,7 +7,7 @@ alias reb='sudo reboot'
 alias p2server='python2 -m SimpleHTTPServer 8005'
 
 alias runserver='python manage.py runserver 0.0.0.0:8001'
-alias aenv='source env/bin/activate'
+alias aenv='source env/bin/activate || source .env/bin/activate'
 alias denv='deactivate'
 
 alias docker-run='docker-compose run --rm django'
@@ -28,6 +28,7 @@ alias gpush='git push origin $(git rev-parse --abbrev-ref HEAD)'
 
 alias dog='pygmentize -g -O style=colorful,bg=dark'
 alias reload!="source ~/.zshrc; echo 'Reloaded!'"
+alias fix-display="xrandr --output VGA-2 --primary --right-of VGA-1"
 
 function switch-git {
   if [ "$1" = "work" ]; then

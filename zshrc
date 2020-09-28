@@ -71,15 +71,15 @@ plugins=(
   last-working-dir
   ng
   npm
-  nvm
+  # nvm
   pip
-  pyenv
+  # pyenv
   python
   sudo
   systemd
   virtualenv
   yarn
-  zsh-syntax-highlighting-filetypes
+  # zsh-syntax-highlighting-filetypes
 )
 
 source $ZSH/oh-my-zsh.sh

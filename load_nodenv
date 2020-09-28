@@ -1,0 +1,3 @@
+[ -d "$HOME/.nodenv" ] && export NODENV_DIR="$HOME/.nodenv"
+[ -d "$HOME/.nodenv" ] && eval "$(nodenv init -)"
+[ -d "$HOME/.nodenv/bin" ] && export PATH="$HOME/.nodenv/bin:$PATH"

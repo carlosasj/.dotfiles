@@ -1,13 +1,13 @@
 [credential]
-	helper = cache --timeout=3600
+	helper = store
 
 [user]
 	name = Carlos Schneider
-	email = carlosaschjr@gmail.com
+	email = carlos-a.schneider@exame.com
 
 [core]
 	editor = vim
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	eol = lf
 	ignorecase = false
 
@@ -59,3 +59,5 @@
 
 [gpg]
 	program = gpg2
+[pull]
+	ff = only

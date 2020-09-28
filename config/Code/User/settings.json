@@ -6,7 +6,6 @@
     "editor.fontFamily": "'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
-    "editor.formatOnPaste": true,
     "editor.minimap.renderCharacters": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
@@ -19,7 +18,6 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.useExperimentalFileWatcher": true,
-    "files.autoSave": "onWindowChange",
 
     "npm.packageManager": "yarn",
 
@@ -68,5 +66,23 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.format": "${author}, ${date} • ${message}",
     "gitlens.blame.format": "${message|40?} ${date|14-}",
-    "gitlens.blame.avatars": false
+    "gitlens.blame.avatars": false,
+    "workbench.iconTheme": "vscode-icons",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.tabSize": 2,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Microsoft",
+    "[python]": {
+        "editor.tabSize": 4,
+    },
+    "diffEditor.ignoreTrimWhitespace": false
 }
