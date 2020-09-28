@@ -1,23 +1,22 @@
 eval "`dircolors -b ~/.dir_colors`"
-alias aenv='source env/bin/activate'
 
 alias shutd='sudo shutdown -h now'
 alias reb='sudo reboot'
 
 alias p2server='python2 -m SimpleHTTPServer 8005'
 
-alias runserver='python manage.py runserver 0.0.0.0:8001'
+# alias runserver='python manage.py runserver 0.0.0.0:8001'
 alias aenv='source env/bin/activate'
 alias denv='deactivate'
 
-alias docker-run='docker-compose run --rm django'
-alias docker-man='docker-compose run --rm django python manage.py'
+# alias docker-run='docker-compose run --rm django'
+# alias docker-man='docker-compose run --rm django python manage.py'
 alias docker-cache-clean='docker rm -v $(docker ps -a -q -f status=exited);docker rmi $(docker images -f "dangling=true" -q);docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes'
 
 alias path='echo -e ${PATH//:/\\n}'
 
 alias cd..='cd ..'
-alias ..='cd ..'
+# alias ..='cd ..'
 alias ls='ls --color=auto -h'
 
 alias gut='git'
@@ -25,6 +24,11 @@ alias fit='git'
 alias gir='git'
 alias fir='git'
 alias gpush='git push origin $(git rev-parse --abbrev-ref HEAD)'
+
+alias nr='npm run'
+alias ns='npm run start'
+alias ntw='npm run test:watch'
+alias ntc='npm run test:coverage'
 
 alias dog='pygmentize -g -O style=colorful,bg=dark'
 alias reload!="source ~/.zshrc; echo 'Reloaded!'"

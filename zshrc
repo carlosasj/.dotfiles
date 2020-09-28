@@ -79,7 +79,6 @@ plugins=(
   systemd
   virtualenv
   yarn
-  zsh-syntax-highlighting-filetypes
 )
 
 source $ZSH/oh-my-zsh.sh
