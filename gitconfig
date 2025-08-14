@@ -1,15 +1,16 @@
-[credential]
-	helper = cache --timeout=3600
-
-[user]
-	name = Carlos Schneider
-	email = carlosaschjr@gmail.com
-
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
 	eol = lf
 	ignorecase = false
+#	pager = delta
+
+[user]
+	name = Carlos Schneider
+	email = carlosaschjr@gmail.com
+
+[credential]
+	helper = cache --timeout=3600
 
 [alias]
 	lg = log --graph --all --topo-order --pretty=committree --date=format:'%d/%b %H:%M'
@@ -18,6 +19,60 @@
 	cane = commit --amend --no-edit
 	ds = "!f() { idx=${1-0}; git stash show -p stash@{$idx}; }; f"
 	stash--staged = "!f() { git stash --keep-index && git stash save \"$1\" && git stash apply stash@{1} && git stash show -p | git apply -R && git stash drop stash@{1}; }; f"
+
+[pretty]
+	committree = format:%Cred%h%Creset - %<(60,trunc)%s %Creset(%C(bold blue)%<(15,trunc)%an %Cgreen%cd%Creset) %C(yellow)%d%Creset
+
+[diff]
+	algorithm = patience
+	indentheuristic = 1
+	colorMoved = default
+
+[rerere]
+	enabled = 1
+
+[help]
+	autocorrect = 1
+
+[advice]
+	statusHints = 1
+
+[gpg]
+	program = gpg2
+
+
+
+[delta]
+	plus-color = "#288200"
+	minus-color = "#340001"
+	syntax-theme = Monokai Extended
+	line-numbers = true
+	side-by-side = true
+	features = unobtrusive-line-numbers decorations
+    whitespace-error-style = 22 reverse
+	true-color = true
+
+
+[interactive]
+	diffFilter = delta --color-only --mouse --diff-so-fancy
+
+[delta "unobtrusive-line-numbers"]
+    line-numbers = true
+    line-numbers-minus-style = "#444444"
+    line-numbers-zero-style = "#444444"
+    line-numbers-plus-style = "#444444"
+    line-numbers-left-format = "{nm:>4}┊"
+    line-numbers-right-format = "{np:>4}│"
+    line-numbers-left-style = blue
+    line-numbers-right-style = blue
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-decoration-style = yellow box
+
+
 
 [color]
 	ui = true
@@ -40,22 +95,5 @@
 	frag = magenta bold
 	old = red bold
 	new = green bold
-
-[pretty]
-	committree = format:%Cred%h%Creset - %<(60,trunc)%s %Creset(%C(bold blue)%<(15,trunc)%an %Cgreen%cd%Creset) %C(yellow)%d%Creset
-
-[help]
-	autocorrect = 1
-
-[rerere]
-	enabled = 1
-
-[diff]
-	algorithm = patience
-	indentheuristic = 1
-
-[advice]
-	statusHints = 0
-
-[gpg]
-	program = gpg2
+[init]
+	defaultBranch = main

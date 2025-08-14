@@ -65,3 +65,7 @@ switch-git $DEFAULT_GIT_ENV > /dev/null;
 function mk() {
   mkdir -p "$@" && cd "$@"
 }
+
+function unfreeze() {
+  DISPLAY=:0 kwin_x11 --replace;
+}

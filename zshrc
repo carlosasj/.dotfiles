@@ -62,16 +62,13 @@ plugins=(
   colorize
   colored-man-pages
   compleat
-  copydir
-  copyfile
+  copypath
   docker
   docker-compose
   gitfast
-  jira
   last-working-dir
   ng
   npm
-  nvm
   pip
   pyenv
   python
