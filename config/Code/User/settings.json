@@ -28,7 +28,13 @@
     "env/**/*.*",
     "**/site-packages/**/*.py"
   ],
-  "python.venvFolders": ["${workspaceFolder}/env", "envs", ".pyenv", ".direnv"],
+  "python.venvFolders": [
+    "${workspaceFolder}/env",
+    "envs",
+    ".pyenv",
+    ".direnv",
+    "env"
+  ],
 
   "sublimeTextKeymap.promptV3Features": true,
 
@@ -43,9 +49,7 @@
     "suppressFileNotUnderSourceControlWarning": false,
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true
+    "suppressNoRepositoryWarning": false
   },
   "gitlens.defaultDateStyle": "absolute",
   "gitlens.defaultDateFormat": "YYYY-MM-DD hh:mm:ss",
@@ -66,7 +70,11 @@
   "typescript.preferences.quoteStyle": "single",
   "[markdown]": {
     "editor.wordWrap": "on",
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
     "editor.trimAutoWhitespace": false,
     "editor.formatOnSave": false,
     "files.trimTrailingWhitespace": false,
@@ -75,9 +83,36 @@
   "markdown-pdf.footerTemplate": "",
   "markdown-pdf.headerTemplate": "",
   "markdown-pdf.displayHeaderFooter": false,
-  "markdown-pdf.margin.bottom": "9mm",
+  "markdown-pdf.margin.bottom": "8mm",
   "markdown-pdf.margin.left": "9mm",
   "markdown-pdf.margin.right": "9mm",
-  "markdown-pdf.margin.top": "12mm",
-  "gitlens.views.repositories.files.layout": "list"
+  "markdown-pdf.margin.top": "8mm",
+  "markdown-pdf.styles": ["styles.css"],
+  "markdown-pdf.outputDirectory": "output",
+  "markdown-pdf.stylesRelativePathFile": true,
+  "gitlens.views.repositories.files.layout": "list",
+  "markdown-pdf.type": ["pdf", "html"],
+  "sqltools.useNodeRuntime": true,
+  "cSpell.userWords": ["Paulo"],
+  "cSpell.enabled": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "security.workspace.trust.untrustedFiles": "open"
 }
