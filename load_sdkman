@@ -1,6 +1,8 @@
 [[ -d "$HOME/.sdkman" ]] && export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 [[ -d "/usr/lib/jvm/java-7-openjdk/" ]] && export JAVA_HOME_7="/usr/lib/jvm/java-7-openjdk/"
 [[ -d "/usr/lib/jvm/java-8-openjdk/" ]] && export JAVA_HOME_8="/usr/lib/jvm/java-8-openjdk/"
-export JAVA_HOME=$JAVA_HOME_8
+[[ -d "/usr/lib/jvm/java-11-openjdk/" ]] && export JAVA_HOME_11="/usr/lib/jvm/java-11-openjdk/"
+[[ -d "/usr/lib/jvm/java-24-openjdk/" ]] && export JAVA_HOME_24="/usr/lib/jvm/java-24-openjdk/"
+export JAVA_HOME=$JAVA_HOME_24
