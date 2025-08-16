@@ -6,8 +6,8 @@ alias reb='sudo reboot'
 alias p2server='python2 -m SimpleHTTPServer 8005'
 
 # alias runserver='python manage.py runserver 0.0.0.0:8001'
-alias aenv='source env/bin/activate'
-alias denv='deactivate'
+# alias aenv='source env/bin/activate'
+# alias denv='deactivate'
 
 # alias docker-run='docker-compose run --rm django'
 # alias docker-man='docker-compose run --rm django python manage.py'
@@ -20,18 +20,19 @@ alias cd..='cd ..'
 alias ls='ls --color=auto -h'
 
 alias gut='git'
+alias gur='git'
 alias fit='git'
-alias gir='git'
 alias fir='git'
+alias gir='git'
 alias gpush='git push origin $(git rev-parse --abbrev-ref HEAD)'
 
-alias nr='npm run'
-alias ns='npm run start'
-alias ntw='npm run test:watch'
-alias ntc='npm run test:coverage'
+# alias nr='npm run'
+# alias ns='npm run start'
+# alias ntw='npm run test:watch'
+# alias ntc='npm run test:coverage'
 
-alias dog='pygmentize -g -O style=colorful,bg=dark'
-alias reload!="source ~/.zshrc; echo 'Reloaded!'"
+# alias dog='pygmentize -g -O style=colorful,bg=dark'
+alias reload!="source ~/.zshrc; echo '~/.zshrc reloaded!'"
 
 function switch-git {
   if [ "$1" = "work" ]; then
@@ -59,7 +60,7 @@ function switch-git {
   fi
 }
 
-switch-git $DEFAULT_GIT_ENV > /dev/null;
+# switch-git $DEFAULT_GIT_ENV > /dev/null;
 
 
 function mk() {
