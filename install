@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  ./install-mac "${@}"
-else
-  ./install-linux "${@}"
-fi

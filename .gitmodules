@@ -1,7 +1,0 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
-[submodule "LS_COLORS"]
-	path = LS_COLORS
-	url = https://github.com/trapd00r/LS_COLORS.git
