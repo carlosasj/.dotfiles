@@ -36,10 +36,10 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -61,13 +61,15 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
   colorize
   colored-man-pages
-  compleat
-  copypath
+  # compleat
+  # copypath
   docker
-  docker-compose
+  # docker-compose
   gitfast
-  last-working-dir
-  ng
+  history
+  history-substring-search
+  # last-working-dir
+  # ng
   npm
   pip
   pyenv

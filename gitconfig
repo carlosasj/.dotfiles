@@ -2,6 +2,7 @@
 	editor = vim
 	excludesfile = ~/.gitignore_global
 	eol = lf
+	autocrlf = input
 	ignorecase = false
 #	pager = delta
 
@@ -17,6 +18,9 @@
 	lgfiles = !git lg --name-only
 	st = status
 	cane = commit --amend --no-edit
+	c = commit
+  cm = commit -m
+	d = diff
 	ds = "!f() { idx=${1-0}; git stash show -p stash@{$idx}; }; f"
 	stash--staged = "!f() { git stash --keep-index && git stash save \"$1\" && git stash apply stash@{1} && git stash show -p | git apply -R && git stash drop stash@{1}; }; f"
 
@@ -79,6 +83,7 @@
 	branch = auto
 	diff = auto
 	status = auto
+	interactive = auto
 
 [color "status"]
 	added = green
@@ -97,3 +102,10 @@
 	new = green bold
 [init]
 	defaultBranch = main
+[web]
+  browser = firefox
+[push]
+  default = simple
+[pull]
+	rebase = true
+	autostash = true
