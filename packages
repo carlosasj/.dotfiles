@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-CONFIG=${1:-"packages.conf.yaml"}
-
-./install -p dotbot-yaourt/yaourt.py -c $CONFIG
