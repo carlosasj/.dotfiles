@@ -1,4 +1,4 @@
-eval "`dircolors -b ~/.dir_colors`"
+# eval "`dircolors -b ~/.dir_colors`"
 
 alias shutd='sudo shutdown -h now'
 alias reb='sudo reboot'
