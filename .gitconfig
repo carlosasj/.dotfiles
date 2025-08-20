@@ -10,6 +10,9 @@
 	name = Carlos Schneider
 	email = carlosaschjr@gmail.com
 
+[include]
+	path = ~/.work.gitconfig # if it exists
+
 [credential]
 	helper = cache --timeout=3600
 
