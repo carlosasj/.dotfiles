@@ -1,1 +1,1 @@
-export PATH=$PATH:/opt/homebrew/bin:$HOME/Library/Python/3.12/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/git/bin
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/Library/Python/3.9/bin:$HOME/Library/Python/3.12/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/git/bin:$PATH
