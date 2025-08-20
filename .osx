@@ -96,7 +96,7 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Disable the “Are you sure you want to open this application?” dialog
+# Disable the “Are you sure you want to open this application?” dialog # https://macos-defaults.com/misc/lsquarantine.html
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
@@ -182,9 +182,15 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
+# Use Fn keys as F1, F1, F3... by default
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
+
+# Simple tap on Fn does nothing
+defaults write com.apple.HIToolbox AppleFnUsageType -int 0
+
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
 # TODO
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
@@ -754,8 +760,8 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
-# Visualize CPU usage in the Activity Monitor Dock icon
-defaults write com.apple.ActivityMonitor IconType -int 5
+# Visualize CPU graph in the Activity Monitor Dock icon # https://macos-defaults.com/activity-monitor/icontype.html
+defaults write com.apple.ActivityMonitor IconType -int 6
 
 # Show all processes in Activity Monitor
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
