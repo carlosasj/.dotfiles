@@ -112,3 +112,5 @@
 [pull]
 	rebase = true
 	autostash = true
+[sequence]
+	editor = interactive-rebase-tool
