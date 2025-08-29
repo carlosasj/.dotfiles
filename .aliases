@@ -60,6 +60,76 @@ function switch-git {
   fi
 }
 
+# Move the source files to the target directory and create symlinks back to the original location
+# Usage: linkit <source1> [<source2> ...] <target_directory>
+function linkit {
+  if [ $# -lt 2 ]; then
+    echo "Usage: linkit <source1> [<source2> ...] <target_directory>"
+    return 1
+  fi
+
+  # Last argument is the target directory
+  local target_dir="${@: -1}"
+
+  # If target directory does not exist, create it
+  [ ! -d "$target_dir" ] && mkdir -p "$target_dir"
+
+  # Convert target_dir to absolute path for better symlinks
+  target_dir=$(realpath "$target_dir")
+
+  # Process all arguments except the last one (target directory)
+  local args=("$@")
+  local sources=("${args[@]:0:$#-1}")  # Get all elements except the last one
+
+  for source in "${sources[@]}"; do
+    # Expand path and check existence
+    source=$(realpath "$source" 2>/dev/null) || {
+      echo "Error: $source does not exist"
+      continue
+    }
+
+    local basename=$(basename "$source")
+    local target_path="$target_dir/$basename"
+
+    # Check if source is already a symlink
+    if [ -L "$source" ]; then
+      echo "Skipping $source: already a symlink"
+      continue
+    fi
+
+    # Check if destination exists
+    if [ -e "$target_path" ]; then
+      if [ -L "$target_path" ]; then
+        echo "Skipping $source: target $target_path exists and is a symlink"
+        continue
+      else
+        echo "Warning: $target_path already exists and is not a symlink"
+        read -p "Overwrite? (y/N): " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+          echo "Skipping $source"
+          continue
+        fi
+        rm -rf "$target_path"
+      fi
+    fi
+
+    # Move the file/directory to target
+    if mv "$source" "$target_path"; then
+      # Create symlink back to original location
+      if ln -s "$target_path" "$source"; then
+        echo "✓ Moved $source to $target_path and created symlink"
+      else
+        echo "✗ Failed to create symlink for $source"
+        # Try to move back on failure
+        mv "$target_path" "$source" 2>/dev/null || echo "✗ Failed to restore $source"
+      fi
+    else
+      echo "✗ Failed to move $source to $target_path"
+    fi
+  done
+}
+
 # switch-git $DEFAULT_GIT_ENV > /dev/null;
 
 
