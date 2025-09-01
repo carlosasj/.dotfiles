@@ -1,0 +1,26 @@
+HL_LAYOUT_TEMPLATE=(
+  _PRE    "${IS_SSH+ssh }" # shows "ssh " if this is an ssh session
+  USER    '...'
+  HOST    ' @ ...'
+  VENV    ' with ...'
+  PATH    ' : ...'
+  _SPACER '' # special, only shows when compact, otherwise fill with space
+  BRANCH  ' on ...'
+  STATUS  ' ...'
+  _POST   ''
+)
+HL_CONTENT_TEMPLATE=(
+  USER   "%{$bold$red%} ..."
+  HOST   "%{$bold$yellow%}󰇅 ..."
+  VENV   "%{$bold$green%} ..."
+  PATH   "%{$bold$blue%} ..."
+  BRANCH "%{$bold$cyan%} ..."
+  STATUS "%{$bold$magenta%}..."
+)
+HL_GIT_COUNT_MODE='on'
+HL_GIT_SEP_SYMBOL=' '
+HL_GIT_STATUS_SYMBOLS[CONFLICTS]="%{$red%}✘"
+HL_GIT_STATUS_SYMBOLS[CLEAN]="%{$green%}✔"
+HL_CLOCK_MODE='on'
+HL_CLOCK_SOURCE="date +'%A %H:%M'"
+HL_ERR_MODE='detail'
