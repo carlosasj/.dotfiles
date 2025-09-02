@@ -5,22 +5,35 @@ HL_LAYOUT_TEMPLATE=(
   VENV    ' with ...'
   PATH    ' : ...'
   _SPACER '' # special, only shows when compact, otherwise fill with space
-  BRANCH  ' on ...'
-  STATUS  ' ...'
+  BRANCH  ' ...'
+  STATUS  ' | ...'
   _POST   ''
 )
 HL_CONTENT_TEMPLATE=(
-  USER   "%{$bold$red%} ..."
-  HOST   "%{$bold$yellow%}󰇅 ..."
-  VENV   "%{$bold$green%} ..."
-  PATH   "%{$bold$blue%} ..."
-  BRANCH "%{$bold$cyan%} ..."
-  STATUS "%{$bold$magenta%}..."
+  USER   "%{$blue%} ..."
+  HOST   "%{$cyan%} ..."
+  VENV   "%{$magenta%} ..."
+  PATH   "%{$green%} ..."
+  BRANCH "%{$yellow%} ..."
+  STATUS "%{$white%}..."
 )
+declare -A HL_GIT_STATUS_SYMBOLS=(
+  STAGED    "%{$green%}" # "+"
+  CHANGED   "%{$yellow%}" # "!"
+  UNTRACKED "%{$faint%}" # "?"
+  BEHIND    "%{$red%}" # "↓"
+  AHEAD     "%{$magenta%}" #"↑"
+  DIVERGED  "%{$red%}󰃻" # "⇕"
+  STASHED   "%{$faint%}" # "*"
+  CONFLICTS "%{$red%}" # consider "%{$red%}✘"
+  CLEAN     "%{$green%}" # consider "✓" or "%{$green%}✔"
+)
+HL_SEP_MODE='off'
+HL_SEP_STYLE=''
+HL_TRUNC_SYMBOL='…'
 HL_GIT_COUNT_MODE='on'
 HL_GIT_SEP_SYMBOL=' '
-HL_GIT_STATUS_SYMBOLS[CONFLICTS]="%{$red%}✘"
-HL_GIT_STATUS_SYMBOLS[CLEAN]="%{$green%}✔"
 HL_CLOCK_MODE='on'
-HL_CLOCK_SOURCE="date +'%A %H:%M'"
+HL_CLOCK_SOURCE="date +'%A  %H:%M'"
 HL_ERR_MODE='detail'
+HL_OVERWRITE='on'
