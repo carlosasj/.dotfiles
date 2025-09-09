@@ -5,3 +5,5 @@
 [ -d "$HOME/.nodenv" ] && export NODENV_DIR="$HOME/.nodenv"
 [ -d "$NODENV_DIR/bin" ] && export PATH="$NODENV_DIR/bin:$PATH"
 [ -s "$NODENV_DIR/bin/nodenv" ] && eval "$(nodenv init -)"
+
+[ -d "/opt/homebrew/bin/mise" ] && eval "$(mise activate zsh)"

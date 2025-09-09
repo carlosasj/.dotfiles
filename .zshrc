@@ -71,13 +71,14 @@ plugins=(
   history-substring-search
   # last-working-dir
   # ng
+  mise
   npm
   pip
-  pyenv
+  # pyenv
   python
   sudo
   systemd
-  virtualenv
+  # virtualenv
   yarn
 )
 

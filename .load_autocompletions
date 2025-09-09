@@ -1,0 +1,9 @@
+# The following lines were added by compinstall
+# zstyle :compinstall filename '/home/schneider/.zshrc'
+zstyle ':completion:*' menu select # https://wiki.archlinux.org/title/Zsh#Command_completion
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+[[ -d "${ASDF_DATA_DIR:-$HOME/.asdf}/shims" ]] && export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
