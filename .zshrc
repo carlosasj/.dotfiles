@@ -122,6 +122,7 @@ done
 
 DOTS=(
   ~/.aliases
+  ~/.functions
 )
 
 for dot in "${DOTS[@]}"; do
