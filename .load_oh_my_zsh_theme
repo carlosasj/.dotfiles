@@ -14,7 +14,7 @@ HL_CONTENT_TEMPLATE=(
   HOST   "%{$cyan%} ..."
   VENV   "%{$magenta%} ..."
   PATH   "%{$green%} ..."
-  BRANCH "%{$yellow%} ..."
+  BRANCH "%{$faint%} ..."
   STATUS "%{$white%}..."
 )
 declare -A HL_GIT_STATUS_SYMBOLS=(
@@ -34,6 +34,6 @@ HL_TRUNC_SYMBOL='…'
 HL_GIT_COUNT_MODE='on'
 HL_GIT_SEP_SYMBOL=' '
 HL_CLOCK_MODE='on'
-HL_CLOCK_SOURCE="date +'%A  %H:%M'"
+HL_CLOCK_SOURCE="date +'  %H:%M'"
 HL_ERR_MODE='detail'
 HL_OVERWRITE='on'
